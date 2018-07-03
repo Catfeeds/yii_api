@@ -1,0 +1,309 @@
+@CHARSET "UTF-8";
+.tab-content {
+    padding: 20px 20px;
+    background: #fff;
+    overflow: hidden;
+    zoom: 1;
+}
+.tab-content h3 {
+	font-size: 16px;
+	color: #404040;
+	font-weight: bold;
+}
+.form-center {
+    margin: 0 auto;
+}
+.material_form {
+    overflow: hidden;
+    zoom: 1;
+    margin: 20px 0;
+}
+.material_form .preview_area {
+    float: left;
+    width: 308px;
+    border: 1px solid #ddd;
+}
+.material_form .edit_area {
+    float: left;
+    width: 500px;
+    margin-left: 30px;
+    display: inline;
+    border: 1px solid #ddd;
+    padding: 15px;
+    position: relative;
+    min-height: 300px;
+}
+.material_form .preview_area .edit_item {
+    position: relative;
+}
+.appmsg_item {
+    padding: 15px;
+    /* width: 278px; */
+}
+.appmsg_item .time {
+    color: #888;
+    font-size: 12px;
+}
+.appmsg_item .main_img {
+    margin: 10px 0;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+}
+.appmsg_item .main_img img {
+    width: 100%;
+    min-height: 150px;
+}
+.appmsg_item .main_img h6 {
+    position: absolute;
+    background: RGBA(0,0,0,.5);
+    color: #fff;
+    padding: 3px 5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    font-size: 14px;
+}
+.appmsg_item h6 {
+    font-size: 16px;
+    color: #222;
+    font-weight: normal;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 0;
+    text-align: left;
+}
+.appmsg_edit_action {
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+.appmsg_edit_action a {
+    border: 2px dashed #ddd;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    display: block;
+}
+.edit_item:hover .hover_area {
+    display: block;
+}
+.hover_area {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: RGBA(0,0,0,.4);
+    z-index: 100;
+    text-align: center;
+    padding-top: 100px;
+    display: none;
+}
+
+.appmsg_item h6 {
+    font-size: 16px;
+    color: #222;
+    font-weight: normal;
+}
+.appmsg_item .intro {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+input, textarea, .uneditable-input {
+    width: 206px;
+}
+input, button, textarea, select, option {
+    font-family: inherit;
+    font-size: 100%;
+    outline: 0;
+}
+.hover_area {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: RGBA(0,0,0,.4);
+    z-index: 100;
+    text-align: center;
+    padding-top: 100px;
+    display: none;
+}
+.edit_item .hover_area a {
+    color: #fff;
+    border: 1px solid #eee;
+    padding: 3px 5px;
+    margin: 10px 10px;
+}
+.appmsg_sub_item {
+    position: relative;
+    height: 109px;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+.appmsg_sub_item .title {
+    padding: 10px 108px 10px 0;
+}
+.appmsg_sub_item .main_img {
+    width: 78px;
+    height: 78px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.edit_item:hover .hover_area {
+    display: block;
+}
+.appmsg_sub_item .hover_area {
+    padding-top: 50px;
+}
+.appmsg_sub_item .main_img {
+    width: 78px;
+    height: 78px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.appmsg_sub_item .main_img img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 右侧部分 */
+.material_form .edit_area {
+    float: left;
+    width: 500px;
+    margin-left: 30px;
+    display: inline;
+    border: 1px solid #ddd;
+    padding: 15px;
+    position: relative;
+    min-height: 300px;
+}
+.material_form .edit_area .area_arrow {
+    position: absolute;
+    top: 60px;
+    left: -30px;
+    width: 30px;
+    height: 30px;
+    background: url(../img/area_arrow.png) no-repeat;
+    z-index: 100;
+}
+.tab-content .in {
+    display: block;
+    float: left;
+}
+
+.form-horizontal .item-label {
+    display: block;
+    margin-right: 5px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.need_flag {
+    color: #F00;
+    vertical-align: -6px;
+    font-size: 20px;
+}
+.form-horizontal .item-label .check-tips {
+    margin-left: 8px;
+    color: #aaa;
+    font-weight: normal;
+}
+.form-horizontal .controls {
+    overflow: hidden;
+    padding: 5px 5px 5px 0;
+    margin-left: 0px;
+	position: relative;
+}
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    display: inline-block;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555555;
+    vertical-align: middle;
+    background: #fff;
+}
+.input-large {
+    width: 390px;
+}
+.text {
+    width: 390px;
+    height: 40px;
+    vertical-align: middle;
+}
+.text {
+    padding: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    transition: all .3s linear;
+}
+.textarea textarea {
+    padding: 6px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    transition: all .3s linear;
+    display: block;
+    min-height: 100px;
+    min-width: 390px;
+}
+
+/*按钮*/
+.textarea textarea {
+    padding: 6px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    transition: all .3s linear;
+    display: block;
+    min-height: 100px;
+    min-width: 390px;
+}
+.submit-btn {
+    padding: 12px 50px;
+    font-size: 16px;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background: #dd4b39;
+    border: none;
+    -moz-transition: color .25s linear, background-color .25s linear;
+    -webkit-transition: color .25s linear, background-color .25s linear;
+    transition: color .25s linear, background-color .25s linear;
+    border-radius: 3px;
+}
+.form_bh {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+    clear: both;
+}
+
+#pic{
+	width:100px;
+	height:100px;
+	/* border-radius:50% ; */
+	margin:20px auto;
+	cursor: pointer;
+}
+.edit_img_icon {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 24px;
+    left: 70px;
+    background: url(../img/edit.png) no-repeat center center;
+    z-index: 0;
+    cursor: pointer;
+}

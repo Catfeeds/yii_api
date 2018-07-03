@@ -1,0 +1,84 @@
+﻿基础
+pre_user            前台用户表
+pre_admin           后台用户表
+pre_sms_log			短信发送日志
+pre_attachment      附件表
+pre_attachment_category 附件分类表
+pre_comment 		评论表
+-----------------------------------------
+pre_tables		小程序桌位表
+pre_res_category	食品分类
+pre_food		食品
+pre_food_sku		食品sku
+pre_food_property	菜品属性
+pre_food_propertychild	菜品属性值
+pre_food_order		菜品订单
+pre_order_food		订单包含的菜品
+pre_order_food_action	订单记录
+pre_food_car_num 	点单分类的数量
+-----------------------------------------
+cms
+pre_position_data  推荐位数据表
+pre_position	   推荐位表
+pre_article 文章主表
+pre_article_cat 文章分类
+pre_article_data 文章数据表
+pre_announce  公告表
+pre_hotsearch 热搜词管理
+pre_history_record 历史记录表
+pre_attention 关注
+pre_message  消息表
+pre_praise 点赞表
+pre_relationship 用户关系表
+pre_merchant 商家审核表
+pre_report 举报表
+----------------------------------------
+微信模块
+素材
+pre_weixin_material_news  图文素材
+pre_weixin_material_image 图片素材表
+pre_weixin_material_text  文本素材表
+pre_weixin_material_file  语音素材
+
+pre_weixin_menu    微信菜单
+pre_weixin_site    微信站点
+pre_weixin_user 微信用户
+------------------------------------------
+超管
+super  超管用户
+admin_note  联系记录
+------------------------------------------
+物流
+pre_area_region 物流配置和对应地区
+pre_shipping 物流公司信息表
+pre_shipping_area 物流配置表
+
+pre_region 地区表（到市一级）
+pre_region 地区详细表（到街道信息）
+
+------------------------------------------
+food 食品表
+food_sku 是食品的sku
+food_order 食品订单
+order_food 订单包含的食品
+
+-----------------------------------------
+mall 商城
+pre_default_category 系统默认分类表
+pre_goods_category   商家商品分类表
+pre_goods 商品表
+pre_goods_data 商品详情表
+pre_brand  品牌
+pre_user_address 收货地址
+pre_cart 购物车
+pre_goods_collection 收藏表
+pre_goods_tag     商品标签
+pre_goods_attribute   商品属性  sku
+pre_user_collection   用户收藏表
+pre_delivery_doc      发货单表
+pre_site_pay_order	  店铺加时支付
+pre_goods_type 商品类型表
+pre_spec 规格表
+pre_spec_item 规格项表
+pre_spec_goods_price  规格对应 价格 库存 条码表
+

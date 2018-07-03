@@ -1,0 +1,135 @@
+安装配制:
+一、配制ip白名单(开发->基本配置) ip白名单 101.132.179.80
+二、获取地理位置
+1、登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。hxx.sbdhxx.com 
+2、业务域名(不会被重新排版,不会出现安全提示)  hxx.sbdhxx.com 
+3、JS接口安全域名 hxx.sbdhxx.com 
+4、授权回调页面域名 (获取用户openid、头像(开发 - 接口权限 - 网页服务 - 网页帐号 - 网页授权获取))
+hxx.sbdhxx.com 
+三、 支付配制 (微信支付-商户平台) 
+商户平台-->产品中心-->开发配置->支付授权目录 https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_3#
+1、http://hxx.sbdhxx.com/
+2、代码里面需要修改支付的参数、证书、回调地址   
+三、代码里面配制appid、appsecrt
+wx1a5194c3bef92797
+693c24d6697fd10a080559eb2e2685a6
+
+http://frontend.dev-open.itdongli.com 前台
+http://api.dev-open.itdongli.com      api接口
+http://backend.dev-open.itdongli.com  后台
+http://data.dev-open.itdongli.com     数据
+
+http://backend.dev-open.itdongli.com/index.php?r=site/login
+admin
+123456
+
+chmod 0777 backend/runtime
+chmod 0777 backend/web/assets
+chmod 0777 frontend/runtime
+chmod 0777 frontend/web/assets
+chmod 0777 super/runtime
+chmod 0777 api/runtime
+chmod 0777 wap/runtime
+chmod 0777 wap/web/assets
+chmod 0777 upload
+chmod 0755 yii
+chmod 0777 common/extensions/Wechat/Cache/
+
+
+nginx 配制
+server
+    {
+        listen 80;
+        server_name frontend.dev-open.itdongli.com;
+        index index.html index.htm index.php default.html default.htm default.php;
+        root  /home/.wwwroot/open/frontend/web;
+
+        #include none.conf;
+        #error_page   404   /404.html;
+        location ~ [^/]\.php(/|$)
+        {
+            try_files $uri =404;
+            fastcgi_pass  unix:/tmp/php-cgi.sock;
+            fastcgi_index index.php;
+            include fastcgi.conf;
+        }
+        location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$
+        {
+            expires      30d;
+        }
+        location ~ .*\.(js|css)?$
+        {
+            expires      12h;
+        }
+        location ~ /\.
+        {
+        #    deny all;
+        }
+        #access_log  /home/wwwlogs/www.clientapi.mxu4.com.log;
+    }
+
+server
+    {
+        listen 80;
+        server_name backend.dev-open.itdongli.com;
+        index index.html index.htm index.php default.html default.htm default.php;
+        root  /home/.wwwroot/open/backend/web;
+        #include none.conf;
+        #error_page   404   /404.html;
+        location ~ [^/]\.php(/|$)
+        location / {
+            # Redirect everything that isn't a real file to index.php
+            try_files $uri $uri/ /index.php?$args;
+        }
+        {
+            # try_files $uri =404;
+            fastcgi_pass  unix:/tmp/php-cgi.sock;
+            fastcgi_index index.php;
+            include fastcgi.conf;
+        }
+        location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$
+        {
+            expires      30d;
+        }
+        location ~ .*\.(js|css)?$
+        {
+            expires      12h;
+        }
+        location ~ /\.
+        {
+        #    deny all;
+        }
+        #access_log  /home/wwwlogs/www.clientapi.mxu4.com.log;
+    }
+server
+    {
+        listen 80;
+        server_name api.dev-open.itdongli.com;
+        index index.html index.htm index.php default.html default.htm default.php;
+        root  /home/.wwwroot/open/api/web;
+        #include none.conf;
+        #error_page   404   /404.html;
+        location / {
+            try_files $uri $uri/ /index.php?$args;
+        }
+        location ~ [^/]\.php(/|$)
+        {
+            try_files $uri =404;
+            fastcgi_pass  unix:/tmp/php-cgi.sock;
+            fastcgi_index index.php;
+            include fastcgi.conf;
+        }
+        location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$
+        {
+            expires      30d;
+        }
+        location ~ .*\.(js|css)?$
+        {
+            expires      12h;
+        }
+        location ~ /\.
+        {
+        #    deny all;
+        }
+        #access_log  /home/wwwlogs/www.clientapi.mxu4.com.log;
+    }

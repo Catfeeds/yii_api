@@ -1,0 +1,16 @@
+2018-04-16 09:50:45
+{
+	"version":"1.0",
+	"merId":"100002",
+	"order_id":"1000021522861734006920",
+	"trans_amt":500,
+	"acc_no":"6217004270016306721",
+	"card_name":"闫慧敏",
+	"bank_name":"ICBC",
+	"subbranch_name":"安宁区分行",
+	"province":"甘肃省",
+	"city":"兰州市",
+	"backUrl":"http://118.126.82.51:8090/amount/callback",
+	"sign":"dy6icJCxRCqaQmiJZsKg/g=="
+	
+}  
